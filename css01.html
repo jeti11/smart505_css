@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4일차 1번</title>
+
+    <style>
+        #div01 > h1 { 
+            font-size: 5vw;
+            text-align: center;
+        }
+
+        #div02 { background-color: aquamarine; } 
+        #div02 div {
+            height: 200px;
+            background-color: gray;
+            font-size: 20px;
+        }
+
+        @media screen and (min-width: 700px) {
+            #div02, #div02 > div { 
+                background-color: salmon; 
+                font-size: 24px;
+            }
+        }
+
+        .container { 
+            width: 700px;
+            background-color: #eee;
+            border: 1px solid #222;
+            display: flex;
+        }
+
+        .box { 
+            padding: 5px 45px;
+            margin: 5px;
+            width: 80px;
+            background-color: #222;
+        }
+
+        .box > p { 
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div01">
+        <h3>뷰포트 사용하여 글자 크기를 조절하기</h3>
+        <h1>안녕하세요</h1>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <h3>미디어 쿼리 사용하기</h3>
+
+        <div>
+            <p>개발자 모드를 사용하여 화면 크기를 조절해 보세요</p>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>가나다라</h3>
+
+        <h3>flex box 사용하기</h3>
+
+        <h4>flex-direction : row </h4>
+        <div class="container opt1">
+            <div class="box"><p>1</p></div>
+            <div class="box"><p>2</p></div>
+            <div class="box"><p>3</p></div>
+        </div>
+
+        <br>
+
+        <h4>flex-direction : row-reverse </h4>
+        <div class="container opt2">
+            <div class="box"><p>1</p></div>
+            <div class="box"><p>2</p></div>
+            <div class="box"><p>3</p></div>
+        </div>
+
+        <br>
+
+        <h4>flex-direction : column </h4>
+        <div class="container opt3">
+            <div class="box"><p>1</p></div>
+            <div class="box"><p>2</p></div>
+            <div class="box"><p>3</p></div>
+        </div>
+    </div>
+</body>
+
+</html>
